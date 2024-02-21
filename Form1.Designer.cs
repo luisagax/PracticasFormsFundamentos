@@ -34,6 +34,7 @@ namespace TicketDeVentaP1
             this.txtArticulo = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.libArticulos = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -78,12 +79,22 @@ namespace TicketDeVentaP1
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // libArticulos
+            // 
+            this.libArticulos.FormattingEnabled = true;
+            this.libArticulos.ItemHeight = 22;
+            this.libArticulos.Location = new System.Drawing.Point(500, 20);
+            this.libArticulos.Name = "libArticulos";
+            this.libArticulos.Size = new System.Drawing.Size(238, 246);
+            this.libArticulos.TabIndex = 5;
+            // 
             // frmTicketVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(488, 282);
+            this.ClientSize = new System.Drawing.Size(766, 282);
+            this.Controls.Add(this.libArticulos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtArticulo);
@@ -106,6 +117,7 @@ namespace TicketDeVentaP1
         private System.Windows.Forms.TextBox txtArticulo;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ListBox libArticulos;
     }
 }
 
