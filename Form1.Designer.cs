@@ -29,13 +29,28 @@ namespace TicketDeVentaP1
         /// </summary>
         private void InitializeComponent()
         {
+            this.libArticulos = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtArticulo = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.libArticulos = new System.Windows.Forms.ListBox();
+            this.libSubtotal = new System.Windows.Forms.ListBox();
+            this.btnAgr = new System.Windows.Forms.Button();
+            this.txtCant = new System.Windows.Forms.TextBox();
+            this.txtArt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // libArticulos
+            // 
+            this.libArticulos.FormattingEnabled = true;
+            this.libArticulos.ItemHeight = 22;
+            this.libArticulos.Location = new System.Drawing.Point(30, 89);
+            this.libArticulos.Name = "libArticulos";
+            this.libArticulos.Size = new System.Drawing.Size(437, 180);
+            this.libArticulos.TabIndex = 5;
             // 
             // label1
             // 
@@ -79,21 +94,69 @@ namespace TicketDeVentaP1
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // libArticulos
+            // libSubtotal
             // 
-            this.libArticulos.FormattingEnabled = true;
-            this.libArticulos.ItemHeight = 22;
-            this.libArticulos.Location = new System.Drawing.Point(500, 20);
-            this.libArticulos.Name = "libArticulos";
-            this.libArticulos.Size = new System.Drawing.Size(238, 246);
-            this.libArticulos.TabIndex = 5;
+            this.libSubtotal.FormattingEnabled = true;
+            this.libSubtotal.ItemHeight = 22;
+            this.libSubtotal.Location = new System.Drawing.Point(548, 89);
+            this.libSubtotal.Name = "libSubtotal";
+            this.libSubtotal.Size = new System.Drawing.Size(437, 180);
+            this.libSubtotal.TabIndex = 11;
+            // 
+            // btnAgr
+            // 
+            this.btnAgr.Location = new System.Drawing.Point(921, 55);
+            this.btnAgr.Name = "btnAgr";
+            this.btnAgr.Size = new System.Drawing.Size(64, 28);
+            this.btnAgr.TabIndex = 10;
+            this.btnAgr.Text = "+";
+            this.btnAgr.UseVisualStyleBackColor = true;
+            this.btnAgr.Click += new System.EventHandler(this.btnAgr_Click);
+            // 
+            // txtCant
+            // 
+            this.txtCant.Location = new System.Drawing.Point(805, 55);
+            this.txtCant.Name = "txtCant";
+            this.txtCant.Size = new System.Drawing.Size(100, 28);
+            this.txtCant.TabIndex = 9;
+            // 
+            // txtArt
+            // 
+            this.txtArt.Location = new System.Drawing.Point(548, 55);
+            this.txtArt.Name = "txtArt";
+            this.txtArt.Size = new System.Drawing.Size(235, 28);
+            this.txtArt.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(801, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "CANT.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(544, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 22);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "ARTÍCULOS";
             // 
             // frmTicketVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(766, 282);
+            this.ClientSize = new System.Drawing.Size(1047, 320);
+            this.Controls.Add(this.libSubtotal);
+            this.Controls.Add(this.btnAgr);
+            this.Controls.Add(this.txtCant);
+            this.Controls.Add(this.txtArt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.libArticulos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtPrecio);
@@ -111,13 +174,18 @@ namespace TicketDeVentaP1
         }
 
         #endregion
-
+        private System.Windows.Forms.ListBox libArticulos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtArticulo;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ListBox libArticulos;
+        private System.Windows.Forms.ListBox libSubtotal;
+        private System.Windows.Forms.Button btnAgr;
+        private System.Windows.Forms.TextBox txtCant;
+        private System.Windows.Forms.TextBox txtArt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

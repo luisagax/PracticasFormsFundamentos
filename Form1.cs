@@ -21,7 +21,7 @@ namespace TicketDeVentaP1
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Si el contador es menor a 4 el código se ejecutará, si no mandará un mensaje.
+            //Si el contador es menor a 4 el código se ejecutará, si no mandará un mensaje
             if (cont < 4)
             {
                 //Agregar los valores de las cajas de texto a las variables
@@ -42,6 +42,11 @@ namespace TicketDeVentaP1
             }
             else
                 MessageBox.Show("Solo se pueden agregar 4 artículos.");
+        }
+
+        private void btnAgr_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
