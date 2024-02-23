@@ -16,7 +16,7 @@ namespace TicketDeVentaP1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTicketVenta());
+            Application.Run(new frmMenu());
         }
     }
 }
