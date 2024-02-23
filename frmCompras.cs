@@ -12,9 +12,17 @@ namespace TicketDeVentaP1
 {
     public partial class frmCompras : Form
     {
-        public frmCompras()
+        string[,] ArticulosCompra = new string[4,4];
+        public frmCompras(string[,] Articulo)
         {
             InitializeComponent();
+            ArticulosCompra = Articulo;
+        }
+
+        private void frmCompras_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 4; i++)
+                libSubtotal.Items.Add(ArticulosCompra[i, 0]);
         }
     }
 }

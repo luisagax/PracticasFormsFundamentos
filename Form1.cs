@@ -12,7 +12,7 @@ namespace TicketDeVentaP1
 {
     public partial class frmTicketVenta : Form
     {
-        string[,] Ticket = new string[4, 4];
+        public string[,] Ticket = new string[4, 4];
         int cont = 0;
         public frmTicketVenta()
         {
@@ -45,6 +45,11 @@ namespace TicketDeVentaP1
         }
 
         private void btnAgr_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTicketVenta_Load(object sender, EventArgs e)
         {
 
         }

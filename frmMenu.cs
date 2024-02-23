@@ -12,6 +12,7 @@ namespace TicketDeVentaP1
 {
     public partial class frmMenu : Form
     {
+        string[,] Articulos = new string[4,4];
         public frmMenu()
         {
             InitializeComponent();
@@ -20,13 +21,21 @@ namespace TicketDeVentaP1
         private void tsbArticulos_Click(object sender, EventArgs e)
         {
             frmTicketVenta a = new frmTicketVenta();
-            a.Show();
+            Articulos = a.Ticket;
+            a.ShowDialog();
         }
 
         private void tsbCantidad_Click(object sender, EventArgs e)
         {
-            frmCompras a = new frmCompras();
-            a.Show();
+            if (Articulos[0, 0] == null)
+            {
+                MessageBox.Show("No ha agregado ningún articulo");
+            }
+            else
+            {
+                frmCompras a = new frmCompras(Articulos);
+                a.ShowDialog();
+            }
         }
     }
 }

@@ -100,8 +100,9 @@ namespace TicketDeVentaP1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Tw Cen MT", 14.25F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmCompras";
+            this.Load += new System.EventHandler(this.frmCompras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

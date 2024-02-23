@@ -105,6 +105,7 @@ namespace TicketDeVentaP1
             this.Name = "frmTicketVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TICKET DE VENTA";
+            this.Load += new System.EventHandler(this.frmTicketVenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
