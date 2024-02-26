@@ -37,5 +37,10 @@ namespace TicketDeVentaP1
                 a.ShowDialog();
             }
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

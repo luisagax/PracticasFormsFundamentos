@@ -29,22 +29,14 @@ namespace TicketDeVentaP1
         /// </summary>
         private void InitializeComponent()
         {
-            this.libSubtotal = new System.Windows.Forms.ListBox();
             this.btnAgr = new System.Windows.Forms.Button();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.txtArt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtIndice = new System.Windows.Forms.TextBox();
+            this.lbPrecio = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // libSubtotal
-            // 
-            this.libSubtotal.FormattingEnabled = true;
-            this.libSubtotal.ItemHeight = 22;
-            this.libSubtotal.Location = new System.Drawing.Point(76, 112);
-            this.libSubtotal.Name = "libSubtotal";
-            this.libSubtotal.Size = new System.Drawing.Size(437, 180);
-            this.libSubtotal.TabIndex = 17;
             // 
             // btnAgr
             // 
@@ -64,10 +56,11 @@ namespace TicketDeVentaP1
             // 
             // txtArt
             // 
-            this.txtArt.Location = new System.Drawing.Point(76, 78);
+            this.txtArt.Location = new System.Drawing.Point(131, 78);
             this.txtArt.Name = "txtArt";
-            this.txtArt.Size = new System.Drawing.Size(235, 28);
+            this.txtArt.Size = new System.Drawing.Size(180, 28);
             this.txtArt.TabIndex = 14;
+            this.txtArt.Leave += new System.EventHandler(this.txtArt_Leave);
             // 
             // label3
             // 
@@ -87,13 +80,31 @@ namespace TicketDeVentaP1
             this.label4.TabIndex = 12;
             this.label4.Text = "ARTÍCULOS";
             // 
+            // txtIndice
+            // 
+            this.txtIndice.Location = new System.Drawing.Point(76, 78);
+            this.txtIndice.Name = "txtIndice";
+            this.txtIndice.Size = new System.Drawing.Size(49, 28);
+            this.txtIndice.TabIndex = 17;
+            this.txtIndice.Leave += new System.EventHandler(this.txtIndice_Leave);
+            // 
+            // lbPrecio
+            // 
+            this.lbPrecio.AutoSize = true;
+            this.lbPrecio.Location = new System.Drawing.Point(136, 109);
+            this.lbPrecio.Name = "lbPrecio";
+            this.lbPrecio.Size = new System.Drawing.Size(58, 22);
+            this.lbPrecio.TabIndex = 18;
+            this.lbPrecio.Text = "label1";
+            // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(585, 334);
-            this.Controls.Add(this.libSubtotal);
+            this.ClientSize = new System.Drawing.Size(585, 171);
+            this.Controls.Add(this.lbPrecio);
+            this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.btnAgr);
             this.Controls.Add(this.txtCant);
             this.Controls.Add(this.txtArt);
@@ -109,12 +120,12 @@ namespace TicketDeVentaP1
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox libSubtotal;
         private System.Windows.Forms.Button btnAgr;
         private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.TextBox txtArt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtIndice;
+        private System.Windows.Forms.Label lbPrecio;
     }
 }

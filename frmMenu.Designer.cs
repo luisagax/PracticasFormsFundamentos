@@ -77,8 +77,9 @@ namespace TicketDeVentaP1
             this.ClientSize = new System.Drawing.Size(547, 280);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Tw Cen MT", 14.25F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
