@@ -31,26 +31,34 @@ namespace TicketDeVentaP1
 
         private void txtArt_Leave(object sender, EventArgs e)
         {
-            int indice = 10;
-            int cont = 0;
-            int x = 0;
+            //int indice = 10;
+            //int cont = 0;
+            //int x = 0;
 
-            foreach(string art in ArticulosCompra)
+            //foreach(string art in ArticulosCompra)
+            //{
+            //    if(art == txtArt.Text)
+            //    {
+            //        indice = cont;
+            //        break;
+            //    }
+            //    cont++;
+            //    if (cont == 4)
+            //    {
+            //        x++;
+            //        cont = 0;
+            //    }
+            //}
+            //lbPrecio.Text = ArticulosCompra[x, 1];
+            //txtIndice.Text = indice.ToString();
+            int i = 0;
+            for (i = 0; i < 4; i++)
             {
-                if(art == txtArt.Text)
+                if(ArticulosCompra[i, 0] == txtArt.Text)
                 {
-                    indice = cont;
-                    break;
-                }
-                cont++;
-                if (cont == 4)
-                {
-                    x++;
-                    cont = 0;
+                    lbPrecio.Text = ArticulosCompra[i, 1];
                 }
             }
-            lbPrecio.Text = ArticulosCompra[x, 1];
-            txtIndice.Text = indice.ToString();
         }
     }
 }
