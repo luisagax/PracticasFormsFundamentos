@@ -57,7 +57,7 @@ namespace TicketDeVentaP1
             {
                 if(ArticulosCompra[i, 0] == txtArt.Text)
                 {
-                    lbPrecio.Text = ArticulosCompra[i, 1];
+                    lbPrecio.Text = $"${ArticulosCompra[i, 1]}";
                 }
             }
         }

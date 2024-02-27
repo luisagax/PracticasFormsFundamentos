@@ -91,7 +91,7 @@ namespace TicketDeVentaP1
             // lbPrecio
             // 
             this.lbPrecio.AutoSize = true;
-            this.lbPrecio.Location = new System.Drawing.Point(136, 109);
+            this.lbPrecio.Location = new System.Drawing.Point(127, 109);
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(58, 22);
             this.lbPrecio.TabIndex = 18;
