@@ -58,6 +58,24 @@ namespace TicketDeVentaP1
                 if(ArticulosCompra[i, 0] == txtArt.Text)
                 {
                     lbPrecio.Text = $"${ArticulosCompra[i, 1]}";
+                    
+                }
+            }
+        }
+
+        private void btnAgr_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (ArticulosCompra[i, 0] == txtArt.Text)
+                {
+                    if (txtCant.Text != "")
+                    {
+                        //Aqui se guarda la cantidad en el indice 2
+                        ArticulosCompra[i, 2] = txtCant.Text;
+                        ArticulosCompra[i, 3] = (double.Parse(ArticulosCompra[i, 1]) * double.Parse(ArticulosCompra[i, 2])).ToString();
+                        lblTotal.Items.Add($"{ArticulosCompra[i, 0]} - $ {ArticulosCompra[i, 1]} - Cant. {ArticulosCompra[i, 2]} - Total. $ {ArticulosCompra[i, 3]}");
+                    }
                 }
             }
         }

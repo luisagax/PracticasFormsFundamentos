@@ -34,8 +34,8 @@ namespace TicketDeVentaP1
             this.txtArt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIndice = new System.Windows.Forms.TextBox();
             this.lbPrecio = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnAgr
@@ -46,6 +46,7 @@ namespace TicketDeVentaP1
             this.btnAgr.TabIndex = 16;
             this.btnAgr.Text = "+";
             this.btnAgr.UseVisualStyleBackColor = true;
+            this.btnAgr.Click += new System.EventHandler(this.btnAgr_Click);
             // 
             // txtCant
             // 
@@ -56,7 +57,7 @@ namespace TicketDeVentaP1
             // 
             // txtArt
             // 
-            this.txtArt.Location = new System.Drawing.Point(131, 78);
+            this.txtArt.Location = new System.Drawing.Point(76, 78);
             this.txtArt.Name = "txtArt";
             this.txtArt.Size = new System.Drawing.Size(180, 28);
             this.txtArt.TabIndex = 14;
@@ -80,31 +81,32 @@ namespace TicketDeVentaP1
             this.label4.TabIndex = 12;
             this.label4.Text = "ARTÍCULOS";
             // 
-            // txtIndice
-            // 
-            this.txtIndice.Location = new System.Drawing.Point(76, 78);
-            this.txtIndice.Name = "txtIndice";
-            this.txtIndice.Size = new System.Drawing.Size(49, 28);
-            this.txtIndice.TabIndex = 17;
-            this.txtIndice.Leave += new System.EventHandler(this.txtIndice_Leave);
-            // 
             // lbPrecio
             // 
             this.lbPrecio.AutoSize = true;
-            this.lbPrecio.Location = new System.Drawing.Point(127, 109);
+            this.lbPrecio.Location = new System.Drawing.Point(262, 81);
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(58, 22);
             this.lbPrecio.TabIndex = 18;
             this.lbPrecio.Text = "label1";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.FormattingEnabled = true;
+            this.lblTotal.ItemHeight = 22;
+            this.lblTotal.Location = new System.Drawing.Point(76, 141);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(437, 180);
+            this.lblTotal.TabIndex = 19;
             // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(585, 171);
+            this.ClientSize = new System.Drawing.Size(585, 356);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lbPrecio);
-            this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.btnAgr);
             this.Controls.Add(this.txtCant);
             this.Controls.Add(this.txtArt);
@@ -125,7 +127,7 @@ namespace TicketDeVentaP1
         private System.Windows.Forms.TextBox txtArt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIndice;
         private System.Windows.Forms.Label lbPrecio;
+        private System.Windows.Forms.ListBox lblTotal;
     }
 }
